@@ -3,7 +3,7 @@
 
 **Language Used -** Python 3.7  
 
-## 1. Spam Filtering using Naive Bayes Classifer ##  
+## 1. Spam Filtering using Naive Bayes Classifier ##  
 
 **Basic Functionalities :** nbLearn, nbClassify, nbEvaluate  
 
@@ -18,9 +18,9 @@
  
  **For more details please refer Report.txt**
  
- ## 2. Sequence Labeling using Condiional Random Fields ##
+ ## 2. Sequence Labeling using Conditional Random Fields ##
  
- **Library :** pycrfsuite
+ **Library :** pycrfsuite  
  **Dataset :** The Switchboard Corpus (SWBD) Dialog Tags Annotations (DAMSL). More => https://web.stanford.edu/~jurafsky/ws97/manual.august1.html  
  
  **Baseline Features :** 
