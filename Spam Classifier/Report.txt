@@ -1,0 +1,71 @@
+Assignment 1 Report
+
+Name: Keerthivasan Sivasankar
+
+1. Performance on the development data with 100% of the training data
+1a. spam precision: 0.992553778268064
+1b. spam recall: 0.9793197278911565
+1c. spam F1 score: 0.9858923435145871
+1d. ham precision:0.9509360877985797
+1e. ham recall: 0.982
+1f. ham F1 score: 0.9662184322728764
+
+
+2. Performance on the development data with 10% of the training data
+2a. spam precision: 0.9921918572225321
+2b. spam recall: 0.9681632653061224
+2c. spam F1 score: 0.9800302988569067
+2d. ham precision: 0.9263687853996224
+2e. ham recall: 0.9813333333333333
+2f. ham F1 score: 0.9530592424732923
+
+
+3. Description of enhancement(s) you tried (e.g., different approach(es) to smoothing, treating common words differently, dealing with unknown words differently):
+
+Try-1:
+Enhancement => Replacing numbers with a default unique token - "NUMBER"
+
+100% => Accuracy = 0.9770048309178744, Spam F-1 Score = 0.9836605794315529, Ham F-1 Score = 0.9611998695793936
+10% => Accuracy = 0.9588405797101449, Spam F-1 Score = 0.9703878771027388, Ham F-1 Score = 0.9325308837503958
+
+Observation => Both Accuracy and F-1 scores got reduced
+
+
+Try-2:
+Enhancement => Added Stopword filter with common stopwords from NLTK corpus
+
+For 100%:
+Ignored stopwords completely in the test data - Good
+Accuracy = 0.9771980676328502, Spam F-1 Score = 0.9838134430727024, Ham F-1 Score = 0.9614379084967319
+
+Treated stopwords as Unforeseen words by adding little probability in the test data - Bad
+Accuracy = 0.9715942028985507, Spam F-1 Score = 0.9801055623223711, Ham F-1 Score = 0.9503546099290779
+
+For 10%:
+Ignored stopwords completely in the test data - Bad
+Accuracy = 0.9698550724637681, Spam F-1 Score = 0.9785123966942149, Ham F-1 Score = 0.949514563106796
+
+Treated stopwords as Unforeseen words by adding little probability in the test data - Good
+Accuracy = 0.9702415458937198, Spam F-1 Score = 0.9787937207380887, Ham F-1 Score = 0.9501295336787564
+
+Observation => Out of the two approaches, based on the volume of training data we can decide whether we can ignore stopwords completely or we can treat them as unforeseen words.
+Anyhow both Accuracy and F-1 scores got reduced.
+
+
+Try-3:
+Enhancement => Added Stopword filter with handpicked tokens such as "Subject:", ":", "\", "the", "and"...
+
+100% => Accuracy = 0.980096618357488, Spam F-1 Score = 0.9859462409605676, Ham F-1 Score = 0.9659053293611387
+10% => Accuracy = 0.9739130434782609, Spam F-1 Score = 0.981417756366139, Ham F-1 Score = 0.9562398703403565
+
+Observation => This is best enhancement which actually increased both Accuracy and F-1 scores.
+
+4. Best performance results based on enhancements. Note that these could be the same or worse than the standard implementation.
+4a. spam precision: 0.9887794198139026
+4b. spam recall: 0.9831292517006802
+4c. spam F1 score: 0.9859462409605676
+4d. ham precision: 0.9592373438527285
+4e. ham recall: 0.9726666666666667
+4f. ham F1 score: 0.9659053293611387
+
+
