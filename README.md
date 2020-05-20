@@ -23,7 +23,7 @@
  **Library :** pycrfsuite  
  **Dataset :** The Switchboard Corpus (SWBD) Dialog Tags Annotations (DAMSL). More => https://web.stanford.edu/~jurafsky/ws97/manual.august1.html  
  
- **Baseline Features :** 
+ **Baseline Features :**
  1) Speaker changed from previuous Utterance
  2) First Utterance
  3) Token in an Utterance
